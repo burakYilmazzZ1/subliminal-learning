@@ -120,4 +120,4 @@ Sorularınız için issue açabilirsiniz.
 
 ## Hugging Face Modelleri
 
-![Hugging Face Logo](https://huggingface.co/front/assets/huggingface_logo-noborder.svg) [Hugging Face Modelleri](https://huggingface.co/bylang)
+![[Hugging Face Logo](https://huggingface.co/front/assets/huggingface_logo-noborder.svg) [Hugging Face Modelleri](https://huggingface.co/bylang)]
