@@ -317,7 +317,6 @@ def run_task_distillation(task_meta: Dict[str, Any], seed: int = 42) -> Distilla
 
     tokenizer = AutoTokenizer.from_pretrained(_safe_get(task_meta, "teacher_tokenizer", _safe_get(task_meta, "teacher_model")))
 
-    # Standardise label column name and tokenize.
     if label_field != "labels":
         if label_field in train_ds.column_names:
             train_ds = train_ds.rename_column(label_field, "labels")
@@ -328,7 +327,7 @@ def run_task_distillation(task_meta: Dict[str, Any], seed: int = 42) -> Distilla
         eval_ds = eval_ds.rename_column("label", "labels")
 
     if "labels" not in train_ds.column_names:
-        # factorize string labels if necessary
+
         classes = sorted(set(train_ds[label_field] if label_field in train_ds.column_names else train_ds["label"]))
         mapping = {label: idx for idx, label in enumerate(classes)}
 
